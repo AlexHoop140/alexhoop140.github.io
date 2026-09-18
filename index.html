@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Phuong Trung Le — academic background, research, and selected work.">
+  <meta name="description" content="Phuong Trung Le, master's student in Information Science at Kyoto Institute of Technology. Publications, education, and selected work.">
   <meta name="theme-color" content="#f7f6f2">
   <title>Phuong Trung Le · Academic &amp; Work</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232c5147'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Georgia' font-size='36' fill='%23fff'%3EP%3C/text%3E%3C/svg%3E">
@@ -27,9 +27,7 @@
     .layout { display:grid; grid-template-columns:245px minmax(0,1fr); gap:76px; padding:64px 0 80px; }
     aside { align-self:start; }
     .portrait { width:190px; aspect-ratio:1; display:grid; place-items:center; background:var(--panel); border:1px solid var(--line); border-radius:50%; position:relative; overflow:hidden; margin-bottom:28px; }
-    .portrait:before,.portrait:after { content:""; position:absolute; border:1px solid #d1d7ca; border-radius:50%; width:250px; height:250px; top:35px; left:40px; }
-    .portrait:after { top:65px; left:65px; }
-    .portrait span { position:relative; z-index:1; font:54px Georgia,serif; color:var(--green); letter-spacing:-3px; }
+    .portrait img { position:absolute; inset:0; display:block; width:100%; height:100%; object-fit:cover; object-position:50% 38%; }
     .profile-name { margin:0 0 4px; font:24px/1.3 Georgia,serif; }
     .profile-note { color:var(--muted); margin:0; font-size:14px; }
     .profile-links { margin-top:26px; display:flex; flex-direction:column; align-items:start; gap:8px; font-size:14px; }
@@ -38,7 +36,6 @@
     .eyebrow:before { content:""; width:22px; height:1px; background:var(--green); }
     h1 { font:normal clamp(40px,5vw,59px)/1.13 Georgia,"Times New Roman",serif; letter-spacing:-2px; margin:21px 0 25px; }
     .intro { font-size:18px; line-height:1.85; color:#4e5a53; max-width:610px; }
-    .placeholder { color:var(--muted); }
     .intro p { margin:0 0 17px; }
     .actions { display:flex; flex-wrap:wrap; align-items:center; gap:22px; margin-top:27px; font-size:13px; }
     .button { display:inline-flex; align-items:center; gap:26px; background:var(--green); color:#fff; border:1px solid var(--green); text-decoration:none; padding:10px 18px; border-radius:3px; }
@@ -63,6 +60,9 @@
     .project h3 { font:21px Georgia,serif; }
     .contact { background:var(--panel); padding:25px; border-radius:4px; }
     .contact p { margin:10px 0 0; font-size:14px; color:var(--muted); }
+    .contact a { overflow-wrap:anywhere; }
+    .contact-links, .paper-links { display:flex; flex-wrap:wrap; gap:12px 22px; margin-top:14px; font-size:13px; }
+    .honor { color:var(--green); font-weight:600; }
     footer { border-top:1px solid var(--line); padding:23px 0 30px; display:flex; justify-content:space-between; gap:20px; color:var(--muted); font-size:12px; }
     @media(min-width:1000px) { aside { position:sticky; top:40px; } }
     @media(max-width:850px) { .layout { grid-template-columns:190px minmax(0,1fr); gap:38px; } .portrait { width:155px; } .shell { padding:0 28px; } }
@@ -72,11 +72,8 @@
   </style>
 </head>
 <body>
-  <!-- PERSONALIZE: Search for square brackets throughout this file and replace
-       them with your real details. No external libraries or build step required.
-       Replace the initials portrait with <img src="portrait.jpg" alt="Phuong Trung Le">
-       and add width:100%; height:100%; object-fit:cover to that image.
-       Upload this file as index.html to your personal GitHub Pages repository. -->
+  <!-- Upload index.html and portrait.jpg together to the personal Pages repository.
+       Update the INLG announcement when the paper title, authors, and link are available. -->
   <a class="skip" href="#main">Skip to content</a>
   <div class="shell">
     <header>
@@ -91,13 +88,13 @@
     </header>
     <div class="layout">
       <aside aria-label="Profile">
-        <div class="portrait" role="img" aria-label="PTL initials"><span>PTL</span></div>
+        <div class="portrait"><img src="portrait.jpg" alt="Phuong Trung Le outdoors with a camera" width="1047" height="1570" fetchpriority="high"></div>
         <p class="profile-name">Phuong Trung Le</p>
-        <p class="profile-note">[Current role]<br>[Institution or organization]</p>
+        <p class="profile-note">Master’s student · Information Science<br>Kyoto Institute of Technology</p>
         <div class="profile-links">
-          <a href="#academic">Academic background <span aria-hidden="true">↗</span></a>
-          <a href="#work">Selected work <span aria-hidden="true">↗</span></a>
-          <a href="#contact">Get in touch <span aria-hidden="true">↗</span></a>
+          <a href="https://scholar.google.com/citations?hl=en&amp;user=gsUj9CcAAAAJ">Google Scholar <span aria-hidden="true">↗</span></a>
+          <a href="https://www.linkedin.com/in/phuong-trung-le/">LinkedIn <span aria-hidden="true">↗</span></a>
+          <a href="mailto:le.trung.phuong@vision.is.kit.ac.jp">Email <span aria-hidden="true">↗</span></a>
         </div>
         <p class="side-note">Academic background, research, and things I build.</p>
       </aside>
@@ -106,8 +103,8 @@
           <div class="eyebrow">Personal / Academic</div>
           <h1 id="about-title">Hello, I’m<br>Phuong Trung Le.</h1>
           <div class="intro">
-            <p>[A short introduction about yourself: your current role, where you work or study, and the questions that interest you.]</p>
-            <p>[Describe your research interests and professional experience in two or three sentences.]</p>
+            <p>I’m a master’s student in Information Science at Kyoto Institute of Technology, Japan. My published work explores neural machine translation for building sentiment lexicons.</p>
+            <p>I graduated from Can Tho University with a bachelor’s degree in Information Technology, earning valedictorian honors. Before my current studies, I worked in data analytics and product operations at MoMo.</p>
           </div>
           <div class="actions">
             <a class="button" href="#work">Explore my work <span aria-hidden="true">↗</span></a>
@@ -117,33 +114,41 @@
         </section>
         <section id="academic" aria-labelledby="academic-title">
           <div class="section-heading"><h2 id="academic-title">Academic background</h2><span class="number" aria-hidden="true">01</span></div>
-          <!-- Duplicate an entry for each degree or research position. -->
           <article class="entry">
-            <div class="date">[Years]</div>
-            <div><h3>[Degree or research position]</h3><p>[University / institution · Location]</p><p>[Field of study, thesis topic, or research focus.]</p></div>
+            <div class="date">Current</div>
+            <div><h3>Master’s student in Information Science</h3><p>Kyoto Institute of Technology · Japan</p></div>
           </article>
           <article class="entry">
-            <div class="date">[Years]</div>
-            <div><h3>[Previous degree or position]</h3><p>[University / institution · Location]</p><p>[A brief description of your studies or research.]</p></div>
+            <div class="date">2020–2024</div>
+            <div><h3>Bachelor’s degree in Information Technology</h3><p>Can Tho University · Vietnam</p><p><span class="honor">Valedictorian</span></p></div>
           </article>
         </section>
         <section id="publications" aria-labelledby="publications-title">
           <div class="section-heading"><h2 id="publications-title">Selected publications</h2><span class="number" aria-hidden="true">02</span></div>
-          <!-- Replace this example with a real publication, or remove the section.
-               Add actual Paper / DOI / Code links only when you have their URLs. -->
           <article class="publication">
-            <span class="tag">[Venue · Year]</span>
-            <h3>[Title of your publication]</h3>
-            <p>[Author list, with your name in bold]</p>
-            <p><em>[Journal or conference name]</em></p>
-            <details><summary>Abstract</summary><p>[Add your publication abstract or a short plain-language description of the contribution.]</p></details>
+            <span class="tag">INLG 2026 · Accepted</span>
+            <h3>Paper accepted at INLG 2026</h3>
+            <p>International Natural Language Generation Conference · The Netherlands</p>
+            <p>Paper details and link coming soon.</p>
+          </article>
+          <article class="publication">
+            <span class="tag">Journal article · 2025</span>
+            <h3><a href="https://doi.org/10.1007/s10844-024-00911-7">Neural network translations for building SentiWordNets</a></h3>
+            <p>Khang Nhut Lam, <strong>Trung Phuong Le</strong>, Khanh Cong Ngu, Kien Trung Le, Phuc Minh Le, Huy Hoang-Dang Nguyen, Jugal Kalita</p>
+            <p><em>Journal of Intelligent Information Systems</em>, 63, 1033–1054 (2025). Springer.</p>
+            <div class="paper-links"><a href="https://link.springer.com/article/10.1007/s10844-024-00911-7">Publisher <span aria-hidden="true">↗</span></a><a href="https://doi.org/10.1007/s10844-024-00911-7">DOI <span aria-hidden="true">↗</span></a></div>
+            <details><summary>Research summary</summary><p>This work uses neural machine translation to construct SentiWordNets: lexical resources that associate word senses with sentiment scores. It proposes ways to select translated synset members and assign their sense order, helping build sentiment resources for languages supported by machine translation.</p></details>
           </article>
         </section>
         <section id="work" aria-labelledby="work-title">
           <div class="section-heading"><h2 id="work-title">Work &amp; projects</h2><span class="number" aria-hidden="true">03</span></div>
           <article class="entry">
-            <div class="date">[Years]</div>
-            <div><h3>[Job title]</h3><p>[Organization · Location]</p><p>[Describe your responsibilities and a meaningful contribution.]</p></div>
+            <div class="date">Jan–Sep<br>2025</div>
+            <div><h3>Product Operations Associate</h3><p>MoMo (M_Service) · Full-time</p></div>
+          </article>
+          <article class="entry">
+            <div class="date">Jul 2024–<br>Jan 2025</div>
+            <div><h3>Data Analytics Trainee</h3><p>MoMo (M_Service) · Ho Chi Minh City, Vietnam</p></div>
           </article>
           <article class="project">
             <span class="tag">Personal project</span>
@@ -154,10 +159,8 @@
         </section>
         <section id="contact" class="contact" aria-labelledby="contact-title">
           <h2 id="contact-title">Get in touch</h2>
-          <p>[Your public contact email]</p>
-          <!-- Replace the text above with your actual email link, e.g.
-               <p><a href="mailto:you@example.com">you@example.com</a></p>
-               Add your actual GitHub, Google Scholar, and LinkedIn links here. -->
+          <p><a href="mailto:le.trung.phuong@vision.is.kit.ac.jp">le.trung.phuong@vision.is.kit.ac.jp</a></p>
+          <div class="contact-links"><a href="https://scholar.google.com/citations?hl=en&amp;user=gsUj9CcAAAAJ">Google Scholar <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/phuong-trung-le/">LinkedIn <span aria-hidden="true">↗</span></a></div>
         </section>
       </main>
     </div>

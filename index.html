@@ -46,6 +46,12 @@
     .number { color:#929b91; font:12px ui-monospace,monospace; }
     .entry { display:grid; grid-template-columns:95px minmax(0,1fr); gap:22px; margin:25px 0; }
     .date { color:var(--muted); font-size:12px; padding-top:3px; }
+    .work-timeline .entry { position:relative; margin:0; padding-bottom:30px; }
+    .work-timeline .entry:last-child { padding-bottom:0; }
+    .work-timeline .date { position:relative; padding-right:17px; }
+    .work-timeline .date::after { content:""; position:absolute; right:-4px; top:8px; width:8px; height:8px; border-radius:50%; background:#8b9a8e; }
+    .work-timeline .entry:not(:last-child)::before { content:""; position:absolute; left:94px; top:19px; bottom:-5px; width:2px; background:var(--line); }
+    @media(max-width:640px) { .work-timeline .entry:not(:last-child)::before { left:74px; } }
     h3 { font-size:15px; font-weight:600; line-height:1.55; margin:0 0 5px; }
     .entry p,.publication p,.project p { margin:4px 0; font-size:14px; color:var(--muted); }
     .publication { padding:0 0 23px; }
@@ -103,7 +109,7 @@
           <div class="eyebrow">Personal / Academic</div>
           <h1 id="about-title">Hello, I’m<br>Phuong Trung Le.</h1>
           <div class="intro">
-            <p>I’m a master’s student in Information Science at Kyoto Institute of Technology, Japan. My published work explores neural machine translation for building sentiment lexicons.</p>
+            <p>I’m a master’s student in Information Science at Kyoto Institute of Technology, Japan. My current research interests lie in natural language processing (NLP), particularly cross-lingual text generation and its applications to patent drafting. I study how language models can generate patent claims across languages, jurisdictions, and stages of the patent examination process.</p>
             <p>I graduated from Can Tho University with a bachelor’s degree in Information Technology, earning valedictorian honors. Before my current studies, I worked in data analytics and product operations at MoMo.</p>
           </div>
           <div class="actions">
@@ -127,9 +133,11 @@
           <div class="section-heading"><h2 id="publications-title">Selected publications</h2><span class="number" aria-hidden="true">02</span></div>
           <article class="publication">
             <span class="tag">INLG 2026 · Accepted</span>
-            <h3>Paper accepted at INLG 2026</h3>
+            <h3>A Large-Scale Dataset for Cross-Lingual Multi-Jurisdiction Patent Drafting from Patent Cooperation Treaty Applications</h3>
+            <p><strong>Trung Phuong Le</strong>, Hirofumi Nonaka, Koji Marusaki, Katsuhito Sudoh, Seiya Kawano</p>
             <p>International Natural Language Generation Conference · The Netherlands</p>
-            <p>Paper details and link coming soon.</p>
+            <p>Accepted · Publication link coming soon.</p>
+            <details><summary>Research summary</summary><p>We study the generation of patent claim sets for a target language, jurisdiction, and examination stage. Using 884,179 patent families linked through Patent Cooperation Treaty applications, we build a Japanese–English dataset connecting Japanese and US patent records. The benchmark evaluates machine translation, prompted language models, and supervised adaptation for drafting claims that reflect the target patent office and examination stage.</p></details>
           </article>
           <article class="publication">
             <span class="tag">Journal article · 2025</span>
@@ -141,7 +149,8 @@
           </article>
         </section>
         <section id="work" aria-labelledby="work-title">
-          <div class="section-heading"><h2 id="work-title">Work &amp; projects</h2><span class="number" aria-hidden="true">03</span></div>
+          <div class="section-heading"><h2 id="work-title">Work experience</h2><span class="number" aria-hidden="true">03</span></div>
+          <div class="work-timeline">
           <article class="entry">
             <div class="date">Jan–Sep<br>2025</div>
             <div><h3>Product Operations Associate</h3><p>MoMo (M_Service) · Full-time</p></div>
@@ -150,12 +159,7 @@
             <div class="date">Jul 2024–<br>Jan 2025</div>
             <div><h3>Data Analytics Trainee</h3><p>MoMo (M_Service) · Ho Chi Minh City, Vietnam</p></div>
           </article>
-          <article class="project">
-            <span class="tag">Personal project</span>
-            <div class="project-head"><h3>Market Trade</h3><a href="https://market.phuongtrungle.page">Open <span aria-hidden="true">↗</span></a></div>
-            <p>A personal market-monitoring and trading dashboard.</p>
-            <p>Private application · Sign-in required</p>
-          </article>
+          </div>
         </section>
         <section id="contact" class="contact" aria-labelledby="contact-title">
           <h2 id="contact-title">Get in touch</h2>

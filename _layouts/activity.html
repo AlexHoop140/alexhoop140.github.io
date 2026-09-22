@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<article>
+  <a class="back-link" href="{{ '/blog/' | relative_url }}">← All activities</a>
+  <h1>{{ page.title | escape }}</h1>
+  <div class="event-meta"><span>{{ page.date_label | escape }}</span><span class="event-kind">{{ page.kind | escape }}</span>{% if page.location %}<span>{{ page.location | escape }}</span>{% endif %}</div>
+  {% if page.cover and page.cover != '' %}
+  <figure class="event-cover">
+    <img src="{{ page.cover | relative_url }}" alt="{{ page.cover_alt | default: page.title | escape }}">
+    {% if page.cover_caption %}<figcaption>{{ page.cover_caption | escape }}</figcaption>{% endif %}
+  </figure>
+  {% endif %}
+  <div class="event-content">{{ content }}</div>
+  <div class="event-end"><a href="{{ '/blog/' | relative_url }}">← Back to Blog</a></div>
+</article>

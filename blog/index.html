@@ -1,0 +1,20 @@
+---
+layout: default
+title: Blog
+section: blog
+description: "Conference attendance, poster presentations, and research notes by Phuong Trung Le."
+---
+<div class="eyebrow">Notes from my research journey</div>
+<h1>Blog &amp; activities</h1>
+<p class="journal-lead">Conferences, presentations, and notes along the way.</p>
+<ul class="blog-list">
+  {% assign activities = site.activities | sort: 'order' | reverse %}
+  {% for event in activities %}
+  <li class="blog-item">
+    <div class="event-meta"><span>{{ event.date_label | escape }}</span><span class="event-kind">{{ event.kind | escape }}</span>{% if event.location %}<span>{{ event.location | escape }}</span>{% endif %}</div>
+    <h2><a href="{{ event.url | relative_url }}">{{ event.title | escape }}</a></h2>
+    <p>{{ event.summary | escape }}</p>
+    <a class="read-story" href="{{ event.url | relative_url }}">Read entry <span aria-hidden="true">↗</span><span class="sr-only">: {{ event.title | escape }}</span></a>
+  </li>
+  {% endfor %}
+</ul>

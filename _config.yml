@@ -1,0 +1,22 @@
+title: Phuong Trung Le
+url: "https://phuongtrungle.page"
+baseurl: ""
+description: "Master’s student in Information Science at Kyoto Institute of Technology. Research, publications, and conference notes."
+markdown: kramdown
+collections:
+  activities:
+    output: true
+    permalink: /blog/:name/
+defaults:
+  - scope:
+      path: ""
+      type: activities
+    values:
+      layout: activity
+      section: blog
+exclude:
+  - .tools
+  - README.md
+  - templates
+  - Gemfile
+  - Gemfile.lock
